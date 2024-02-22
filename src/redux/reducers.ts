@@ -9,7 +9,7 @@ const reducer = (state = initialState, action: any): State => {
         tasks: [
           ...state.tasks,
           {
-            id: state.tasks.length + 1,
+            id: Date.now(),
             text: action.payload,
             completed: false,
           },

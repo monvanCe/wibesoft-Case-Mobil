@@ -6,11 +6,12 @@ export interface TodoItemProps {
 }
 
 export interface ButtonProps {
+  onPress: () => void;
   color: string;
+  children: React.ReactNode;
 }
 
-export interface NewsModalProps {
-  children: React.ReactNode;
+export interface AddTaskModelProps {
   visible: boolean;
   onClose: () => void;
 }

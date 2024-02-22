@@ -9,9 +9,12 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {TodoItemProps} from './types';
+import {useDispatch} from 'react-redux';
+import {removeTask, toggleTask} from '../redux/actions';
 
 export const TodoItem: React.FC<TodoItemProps> = ({data}) => {
   const active = data.completed;
+  const dispatch = useDispatch();
 
   const iconName = active
     ? 'checkbox-marked-outline'
@@ -26,17 +29,17 @@ export const TodoItem: React.FC<TodoItemProps> = ({data}) => {
   };
 
   const handleDelete = () => {
-    console.log('Silme butonuna basıldı');
+    dispatch(removeTask(data.id));
   };
 
   const handleCheckBox = () => {
-    console.log('checkboxa tiklandi');
+    dispatch(toggleTask(data.id));
   };
 
   return (
     <Swipeable renderRightActions={renderRightAction}>
       <View style={styles.container}>
-        <Text style={styles.text}>Çöpler Atilacak</Text>
+        <Text style={styles.text}>{data.text}</Text>
         <TouchableOpacity onPress={handleCheckBox}>
           <Icon name={iconName} size={20} color="black" />
         </TouchableOpacity>
@@ -47,6 +50,7 @@ export const TodoItem: React.FC<TodoItemProps> = ({data}) => {
 
 const styles = StyleSheet.create({
   container: {
+    marginBottom: 5,
     height: 40,
     width: '100%',
     backgroundColor: '#c29e3a',
