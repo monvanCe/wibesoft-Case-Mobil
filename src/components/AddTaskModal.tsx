@@ -30,6 +30,7 @@ const AddTaskModel: React.FC<AddTaskModelProps> = ({visible, onClose}) => {
         <View style={styles.container}>
           <View style={styles.content}>
             <TextInput
+              key={'taskNameInput'}
               style={styles.input}
               value={task}
               onChangeText={setTask}
@@ -37,10 +38,16 @@ const AddTaskModel: React.FC<AddTaskModelProps> = ({visible, onClose}) => {
               autoFocus={true}
             />
             <View style={styles.buttonContainer}>
-              <Button color="#a83a32" onPress={onClose}>
+              <Button
+                key={'modalCloseButton'}
+                color="#a83a32"
+                onPress={onClose}>
                 Close
               </Button>
-              <Button color="#3246a8" onPress={handleAddTask}>
+              <Button
+                key={'taskAddButton'}
+                color="#3246a8"
+                onPress={handleAddTask}>
                 Add
               </Button>
             </View>
