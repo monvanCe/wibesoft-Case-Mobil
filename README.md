@@ -80,4 +80,4 @@ To learn more about React Native, take a look at the following resources:
 
 # wibesoft-Case-Mobil
 
-https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnRvdHhwYzJicmMwNzdudnF2eWoxMGRzdDV0dXM4Zm9pM2xtOHNsNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZFuBEu0RrAaCNvU0hV/giphy.gif
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnRvdHhwYzJicmMwNzdudnF2eWoxMGRzdDV0dXM4Zm9pM2xtOHNsNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZFuBEu0RrAaCNvU0hV/giphy.gif)
