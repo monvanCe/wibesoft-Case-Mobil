@@ -45,7 +45,14 @@ export const TodoItem: React.FC<TodoItemProps> = ({data}) => {
           {backgroundColor: active ? '#00ffff' : '#3246a8'},
         ]}>
         <Text style={styles.text}>{data.text}</Text>
-        <TouchableOpacity onPress={handleCheckBox}>
+        <TouchableOpacity
+          onPress={handleCheckBox}
+          style={{
+            height: '100%',
+            width: '10%',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
           <Icon name={iconName} size={20} color="black" />
         </TouchableOpacity>
       </View>
