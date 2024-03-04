@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   StyleSheet,
@@ -38,7 +39,11 @@ export const TodoItem: React.FC<TodoItemProps> = ({data}) => {
 
   return (
     <Swipeable renderRightActions={renderRightAction}>
-      <View style={styles.container}>
+      <View
+        style={[
+          styles.container,
+          {backgroundColor: active ? '#00ffff' : '#3246a8'},
+        ]}>
         <Text style={styles.text}>{data.text}</Text>
         <TouchableOpacity onPress={handleCheckBox}>
           <Icon name={iconName} size={20} color="black" />
@@ -53,7 +58,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     height: 40,
     width: '100%',
-    backgroundColor: '#c29e3a',
     borderRadius: 8,
     paddingHorizontal: 8,
     justifyContent: 'space-between',
